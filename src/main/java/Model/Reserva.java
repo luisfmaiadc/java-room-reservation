@@ -10,28 +10,26 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private LocalDate dataReserva;
+    private LocalDate dataReserva = LocalDate.now();
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
-    private Integer idUsuario;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idUsuario", nullable = false)
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColumn(name = "idSala")
+    @JoinColumn(name = "idSala", nullable = false)
     private Sala sala;
 
-    public Reserva(Integer id, LocalDate dataReserva, LocalDateTime dataInicio, LocalDateTime dataFim,
-                   Integer idUsuario, Usuario usuario, Sala sala) {
-        this.id = id;
-        this.dataReserva = dataReserva;
+    public Reserva(LocalDateTime dataInicio, LocalDateTime dataFim, Usuario usuario, Sala sala) {
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
-        this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.sala = sala;
+    }
+
+    public Reserva() {
     }
 
     public Integer getId() {
@@ -48,10 +46,6 @@ public class Reserva {
 
     public LocalDateTime getDataFim() {
         return dataFim;
-    }
-
-    public Integer getIdUsuario() {
-        return idUsuario;
     }
 
     public Usuario getUsuario() {

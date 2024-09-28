@@ -15,11 +15,10 @@ public class Usuario {
     public Usuario() {
     }
 
-    @OneToMany(mappedBy = "Usuario")
+    @OneToMany(mappedBy = "usuario")
     private List<Reserva> reservas;
 
-    public Usuario(int id, String nome, String email) {
-        this.id = id;
+    public Usuario(String nome, String email) {
         this.nome = nome;
         this.email = email;
     }

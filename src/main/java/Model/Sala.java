@@ -12,13 +12,12 @@ public class Sala {
     private String nome;
     private Integer capacidade;
     private String descricao;
-    private Boolean disponivel;
+    private boolean disponivel;
 
-    @OneToMany(mappedBy = "Sala")
+    @OneToMany(mappedBy = "sala")
     private List<Reserva> reservas;
 
-    public Sala(Integer id, String nome, Integer capacidade, String descricao, Boolean disponivel) {
-        this.id = id;
+    public Sala(String nome, Integer capacidade, String descricao, boolean disponivel) {
         this.nome = nome;
         this.capacidade = capacidade;
         this.descricao = descricao;
