@@ -74,4 +74,18 @@ public class ReservaService {
             System.out.println("O ID de usuário informado não existe.");
         }
     }
+
+    public void buscarReservaPorPeriodo(LocalDateTime dataInicio, LocalDateTime dataFim) {
+
+        EntityManager entityManager = JPAUtil.getEntityManager();
+        ReservaDAO reservaDAO = new ReservaDAO(entityManager);
+
+        List<Reserva> reservas = reservaDAO.buscarReservaPorPeriodo(dataInicio, dataFim);
+
+        if (!reservas.isEmpty()) {
+            reservas.forEach(System.out::println);
+        } else {
+            System.out.println("Nenhuma reserva encontrada para o período informado.");
+        }
+    }
 }

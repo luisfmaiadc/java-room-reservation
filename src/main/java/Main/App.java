@@ -35,6 +35,7 @@ public class App {
         System.out.println("4. Buscar Usuário por ID");
         System.out.println("5. Verificar Disponibilidade de Sala");
         System.out.println("6. Buscar Reservas por Usuário");
+        System.out.println("7. Buscar Reservas por Período");
         System.out.println("0. Sair");
         System.out.print("Escolha uma opção: ");
     }
@@ -58,6 +59,9 @@ public class App {
                 break;
             case 6:
                 dialogBuscarReserva();
+                break;
+            case 7:
+                dialogBuscarReservaPorPeriodo();
                 break;
             case 0:
                 break;
@@ -114,6 +118,14 @@ public class App {
         System.out.println("Digite o ID da sala que deseja verificar a disponibilidade.");
         Integer id = scanner.nextInt();
         salaService.verificarSalaDisponivel(id);
+    }
+
+    private static void dialogBuscarReservaPorPeriodo() {
+        System.out.println("Digite a data e hora de início do período (formato: yyyy-MM-ddTHH:mm):");
+        LocalDateTime dataInicio = LocalDateTime.parse(scanner.nextLine());
+        System.out.println("Digite o horário de fim do período (formato: yyyy-MM-ddTHH:mm):");
+        LocalDateTime dataFim = LocalDateTime.parse(scanner.nextLine());
+        reservaService.buscarReservaPorPeriodo(dataInicio, dataFim);
     }
 
 }
