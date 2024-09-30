@@ -25,4 +25,8 @@ public class UsuarioDAO {
         entityManager.remove(usuario);
     }
 
+    public Usuario buscarUsuario(Integer id) {
+        return entityManager.find(Usuario.class, id);
+    }
+
 }

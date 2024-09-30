@@ -12,16 +12,15 @@ public class Sala {
     private String nome;
     private Integer capacidade;
     private String descricao;
-    private boolean disponivel;
+    private Boolean disponivel = Boolean.TRUE;
 
     @OneToMany(mappedBy = "sala")
     private List<Reserva> reservas;
 
-    public Sala(String nome, Integer capacidade, String descricao, boolean disponivel) {
+    public Sala(String nome, Integer capacidade, String descricao) {
         this.nome = nome;
         this.capacidade = capacidade;
         this.descricao = descricao;
-        this.disponivel = disponivel;
     }
 
     public Sala() {
@@ -45,5 +44,9 @@ public class Sala {
 
     public Boolean getDisponivel() {
         return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }

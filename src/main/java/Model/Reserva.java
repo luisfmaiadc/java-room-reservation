@@ -55,4 +55,16 @@ public class Reserva {
     public Sala getSala() {
         return sala;
     }
+
+    @Override
+    public String toString() {
+        return "Reserva {" +
+                "ID=" + id +
+                ", Data da Reserva =" + dataReserva +
+                ", Horário de Início =" + dataInicio +
+                ", Horário do Fim =" + dataFim +
+                ", Usuário =" + usuario.getNome() +
+                ", Sala =" + sala.getNome() +
+                '}';
+    }
 }

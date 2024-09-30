@@ -25,4 +25,15 @@ public class SalaDAO {
         entityManager.remove(sala);
     }
 
+    public Sala buscarSala(Integer id) {
+        return entityManager.find(Sala.class, id);
+    }
+
+    public Boolean isSalaDisponivel(Integer id) {
+        String jpql = "SELECT s.disponivel FROM Sala s WHERE s.id = :idSala";
+        return entityManager.createQuery(jpql, Boolean.class)
+                .setParameter("idSala", id)
+                .getSingleResult();
+    }
+
 }
