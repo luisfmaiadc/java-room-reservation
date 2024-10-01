@@ -10,7 +10,7 @@
 <p align="center" style="margin-bottom: 20;">
     <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
     <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white alt="Hibernate" />
+    <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white" alt="Hibernate" />
     <img src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white" alt="Apache Maven" />
 </p>
 
@@ -83,7 +83,7 @@ DB_PASSWORD=sua_senha
 ```
 
 <h2 id="colab">🤝 Colaboradores</h2>
-O projeto foi desenvolvido apenas por mim, contudo foi um trabalho desafiador e gratificante!
+<p style="margin-bottom: 20;">O projeto foi desenvolvido de forma independente, proporcionando uma experiência enriquecedora e contribuindo para o meu crescimento como desenvolvedor.</p>
 <table>
   <tr>
     <td align="center">
