@@ -14,11 +14,11 @@ public class Reserva {
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idUsuario", nullable = false)
     private Usuario usuario;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idSala", nullable = false)
     private Sala sala;
 
