@@ -27,7 +27,7 @@ Antes de começar, verifique se você possui as seguintes ferramentas instaladas
 
 Como clonar o projeto:
 ```bash
-git clone git@github.com:luisfmaiadc/Java-Room-Reservation.git
+git clone git@github.com:luisfmaiadc/java-room-reservation.git
 ```
 
 <h2 id="creating">💾 Criando Banco de Dados</h2>
